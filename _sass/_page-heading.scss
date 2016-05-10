@@ -1,0 +1,26 @@
+.page-heading {
+  font-size: 38px;
+  margin-bottom: 70px;
+  margin-top: 40px;
+
+  &::before {
+    color: $blue-color;
+    content: '—';
+    display: block;
+    line-height: 40px;
+  }
+}
+
+h2 {
+  color: $grey-color;
+  font-size: 24px;
+  font-weight: inherit;
+}
+
+h3 {
+  color: $blue-color;
+  font-size: inherit;
+  font-weight: inherit;
+  margin-bottom: 12px;
+  margin-top: 36px;
+}

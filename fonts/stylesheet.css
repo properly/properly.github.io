@@ -1,0 +1,12 @@
+/* GT Pressura Web Light */
+
+@font-face {
+    font-family: 'gt_pressura_light';
+    src: url('gt-pressura-light-web.eot');
+    src: url('gt-pressura-light-web.eot?#iefix') format('embedded-opentype'),
+         url('gt-pressura-light-web.woff') format('woff'),
+         url('gt-pressura-light-web.ttf') format('truetype'),
+         url('gt-pressura-light-web.svg#gt_pressura_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

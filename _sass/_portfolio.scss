@@ -1,0 +1,103 @@
+.portfolio {
+  background-color: $grey-color-light;
+  padding-top: 1px;
+}
+
+.portfolio-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-entry {
+  border-bottom: 8px solid $yellow-color;
+  margin-bottom: 90px;
+  padding-bottom: 70px;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.entry-link {
+  color: $white-color;
+  float: right;
+  font-size: 14px;
+  font-weight: 100;
+  margin: 30px 24px;
+
+  @include media-query($on-palm) {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"> <defs> <style> .cls-1 {fill: #fff; fill-rule: evenodd;} </style> </defs> <path id="offsite.svg" class="cls-1" d="M1236,3545v6h-14v-10h10v-1h-10a1,1,0,0,0-1,1v10a1,1,0,0,0,1,1h14a1,1,0,0,0,1-1v-6h-1Zm1-6h-3v1h2.29l-5.64,5.65,0.7,0.7,5.65-5.64V3543h1v-4h-1Z" transform="translate(-1221 -3539)"/> </svg>');
+    content: ' ';
+    display: inline-block;
+    height: 13px;
+    margin: 0 0 -1px 10px;
+    width: 17px;
+  }
+
+  &:visited {
+    color: $white-color;
+  }
+}
+
+.entry-description {
+  font-size: 16px;
+  font-weight: 100;
+  margin: 30px 24px;
+  max-width: 465px;
+
+  a {
+    border-bottom: 1px solid $grey-color;
+    color: inherit;
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover {
+      border-color: $blue-color;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-bottom: 12px;
+  }
+}
+
+.entry-title,
+.entry-body {
+  margin: 0 0 12px;
+}
+
+.entry-title {
+  clear: left;
+  color: inherit;
+  display: inline-block;
+  float: left;
+  font-size: inherit;
+  font-weight: 500;
+  width: 100px;
+
+  @include media-query($on-palm) {
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+.entry-body {
+  display: inline-block;
+  max-width: calc(100% - 100px);
+  width: 365px;
+
+  @include media-query($on-palm) {
+    max-width: 100%;
+    width: 100%;
+  }
+}

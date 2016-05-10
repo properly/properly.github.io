@@ -2,22 +2,86 @@
 layout: default
 ---
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+<div class="about">
+  <div class="wrapper">
+    <div class="about-content"><h1 class="page-heading">About us</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <h2>Small but flexible and effective.</h2>
+      <p>We do contract work for clients, large and small. Business systems as well as content managment and campaign sites.</p>
+      <p>We also maintain echoes, a platform targeted at content and social media agencies. Improving day to day content approval.</p>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+      <h3>What we can do</h3>
+      <p>Most front end tools and frameworks. Javascript,  HTML, CSS and preprocesors, frameworks such as angular and react.</p>
+
+      <p>Back-end technologies such as ruby, php, and frameworks such as Ruby on Rails, Sinatra, Symfony, Wordpress. We also manage setting up servers, domains and email for clients.</p>
+
+      <h3>Contact</h3>
+      <p>Send us an email at dani@properly.com.br or ola@properly.com.br and we’ll get back to you as soon as possible.</p></div>
+  </div>
+</div>
+
+<div class="portfolio">
+  <div class="wrapper">
+
+    <h1 class="page-heading">Portfolio</h1>
+
+    <ul class="portfolio-list">
+      {% for post in site.posts %}
+      <li class="portfolio-entry">
+        <img alt="" src="{{ post.image }}"/>
+
+
+        {% if post.link %}
+        <a class="entry-link" href="{{ post.link }}">Click to open site</a>
+        {% endif %}
+
+        <div class="entry-description">
+          {% if post.client %}
+          <h2 class="entry-title">
+            Client
+          </h2>
+          <p class="entry-body">
+            {{ post.client }}
+          </p>
+          {% endif %}
+
+          {% if post.agency %}
+          <h2 class="entry-title">
+            Agency
+          </h2>
+          <div class="entry-body">
+            {% if post.agency.url %}
+            <a href="{{post.agency.url}}">{{ post.agency.name }}</a>
+            {% else %}
+            {{ post.agency.name }}
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if post.content %}
+          <h2 class="entry-title">
+            Description
+          </h2>
+          <div class="entry-body">
+            {{ post.content }}
+          </div>
+          {% endif %}
+
+          {% if post.categories %}
+          <h2 class="entry-title">
+            Scope
+          </h2>
+          <div class="entry-body">
+            {% for category in post.categories %}
+            {{ category }}
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        </div>
       </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+      {% endfor %}
+    </ul>
+  </div>
 </div>

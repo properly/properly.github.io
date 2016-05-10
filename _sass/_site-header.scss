@@ -1,0 +1,37 @@
+.site-header {
+  background-color: $grey-color;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="11.312" viewBox="0 0 20 11.312"> <defs> <style> .cls-1 {fill: none; stroke: #d0d2d3; stroke-width: 1px; fill-rule: evenodd;} </style> </defs> <path id="down-arrow.svg" class="cls-1" d="M693,740.407L683.5,750l-9.5-9.594" transform="translate(-673.5 -739.188)"/> </svg>');
+  background-position: 50% calc(100% - 20px);
+  background-repeat: no-repeat;
+  color: $white-color;
+
+  .wrapper {
+    height: 100vh;
+    position: relative;
+  }
+}
+
+.site-title-wrap {
+  bottom: 70px;
+  left: $spacing-unit;
+  position: absolute;
+  right: $spacing-unit;
+}
+
+.site-title-wrap {
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+
+  span {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+.tagline {
+  font-size: 26px;
+  font-weight: lighter;
+  margin: 0;
+}
