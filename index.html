@@ -24,7 +24,7 @@ layout: default
 <div class="portfolio">
   <div class="wrapper">
 
-    <h1 class="page-heading">Portfolio</h1>
+    <h1 class="page-heading">Selection of projects</h1>
 
     <ul class="portfolio-list">
       {% for post in site.posts %}
@@ -70,18 +70,51 @@ layout: default
 
           {% if post.categories %}
           <h2 class="entry-title">
-            Scope
+            Languages
           </h2>
           <div class="entry-body">
-            {% for category in post.categories %}
-            {{ category }}
-            {% endfor %}
+            {{ post.categories | join:', ' }}
           </div>
           {% endif %}
 
+          {% if post.frameworks %}
+          <h2 class="entry-title">
+            Frameworks
+          </h2>
+          <div class="entry-body">
+            {{ post.frameworks | join:', ' }}
+          </div>
+          {% endif %}
+
+          {% if post.integrations %}
+          <h2 class="entry-title">
+            Integrations
+          </h2>
+          <div class="entry-body">
+              {{ post.integrations | join:', ' }}
+          </div>
+          {% endif %}
         </div>
       </li>
       {% endfor %}
     </ul>
+  </div>
+
+  <div class="wrapper">
+  <h1 class="page-heading">Selection of clients</h1>
+  <ul>
+    <li class="client">
+      ICLP
+    </li>
+    <li class="client">
+      Grupo Vegas
+    </li>
+    <li class="client">
+      GOS Filmes
+    </li>
+    <li class="client">
+      Vamos Falar Sobre o Luto
+    </li
+  </ul>
   </div>
 </div>
