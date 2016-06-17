@@ -3,7 +3,7 @@ layout: post
 title:  Portfolio Ennio Franco
 client: Ennio Franco
 project: Portfolio Ennio Franco
-image:  varegenvag.jpg
+image:  enniofranco.png
 link:   http://enniofranco.com
 date:   2016-01-01 12:00:00 -0300
 categories: Ruby Javascript CSS HTML

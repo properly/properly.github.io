@@ -6,7 +6,7 @@ project: Loxy Cases
 agency:
   name: brandwork
   url:  http://brandwork.se
-image:  varegenvag.jpg
+image:  loxy.png
 link:   http://www.loxy.no/where-elements-matter/never-let-brand-washed/
 date:   2016-01-01 12:00:00 -0300
 categories: PHP Javascript CSS HTML
