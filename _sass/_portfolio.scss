@@ -26,22 +26,37 @@
   font-size: 14px;
   font-weight: 100;
   margin: 30px 24px;
+  transition: all ease .2s;
 
   @include media-query($on-palm) {
     margin-bottom: 0;
   }
 
   &::after {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"> <defs> <style> .cls-1 {fill: #fff; fill-rule: evenodd;} </style> </defs> <path id="offsite.svg" class="cls-1" d="M1236,3545v6h-14v-10h10v-1h-10a1,1,0,0,0-1,1v10a1,1,0,0,0,1,1h14a1,1,0,0,0,1-1v-6h-1Zm1-6h-3v1h2.29l-5.64,5.65,0.7,0.7,5.65-5.64V3543h1v-4h-1Z" transform="translate(-1221 -3539)"/> </svg>');
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"> <defs> <style> .cls-1 {fill: ' + $yellow-color + '; fill-rule: evenodd;} </style> </defs> <path id="offsite.svg" class="cls-1" d="M1236,3545v6h-14v-10h10v-1h-10a1,1,0,0,0-1,1v10a1,1,0,0,0,1,1h14a1,1,0,0,0,1-1v-6h-1Zm1-6h-3v1h2.29l-5.64,5.65,0.7,0.7,5.65-5.64V3543h1v-4h-1Z" transform="translate(-1221 -3539)"/> </svg>');
     content: ' ';
     display: inline-block;
+    -moz-filter: brightness(3);
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
     height: 13px;
     margin: 0 0 -1px 10px;
+    transition: filter ease .2s;
     width: 17px;
   }
 
   &:visited {
     color: $white-color;
+  }
+
+  &:hover {
+    color: $yellow-color;
+
+    &::after {
+      -moz-filter: brightness(1);
+      -webkit-filter: brightness(1);
+      filter: brightness(1);
+    }
   }
 }
 
